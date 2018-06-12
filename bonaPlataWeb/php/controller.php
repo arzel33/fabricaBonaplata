@@ -22,17 +22,17 @@ else if (isset($_POST["motors_on"])) {
 }
 
 function checkServerStatus() {
-	$connection = mysqli_connect("localhost", "root", "bonaplataPass", "fabricaBonaplata");
+	$connection = mysqli_connect("localhost", /*USERNAME"*/, /*"PASSWORD"*/, "fabricaBonaplata");
 	$result = mysqli_query($connection, "SELECT status FROM procedures");
 	$status = mysqli_fetch_assoc($result);
 	return implode(" ", $status);
 }
 function makeServerBusy() {
-	$connection = mysqli_connect("localhost", "root", "bonaplataPass", "fabricaBonaplata");
+	$connection = mysqli_connect("localhost", /*USERNAME"*/, /*"PASSWORD"*/, "fabricaBonaplata");
 	mysqli_query($connection, "UPDATE procedures SET status=1;");
 }
 function clearServer() {
-	$connection = mysqli_connect("localhost", "root", "bonaplataPass", "fabricaBonaplata");
+	$connection = mysqli_connect("localhost", /*USERNAME"*/, /*"PASSWORD"*/, "fabricaBonaplata");
 	mysqli_query($connection, "UPDATE procedures SET status=0;");
 }
 
