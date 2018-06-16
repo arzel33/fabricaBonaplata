@@ -142,8 +142,8 @@ board.on("ready", function() {
     var mysql = require('mysql');
     var connection = mysql.createConnection({
         host     : 'localhost',
-        user     : 'root',
-        password : 'bonaplataPass',
+        user     : /*'user'*/,
+        password : /*'Pass'*/,
         database : 'fabricaBonaplata'   
     });
     connection.connect(function(err) {
